@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'io.th0rgal'
+version '0.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation group: 'net.dv8tion', name: 'JDA', version: '4.ALPHA.0_105'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+}

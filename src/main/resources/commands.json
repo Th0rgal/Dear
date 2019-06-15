@@ -1,0 +1,73 @@
+{
+  "help": {
+    "aliases": [
+      "h",
+      "aide"
+    ],
+    "actions": {
+      "embed": {
+        "description": "```👷 DΞΛR bot is currently in development ```",
+        "url": "https://discordapp.com",
+        "color": 16777215,
+        "footer": {
+          "icon_url": "https://warcore.tech/deer/ultra_small_logo.png",
+          "text": "DΞΛR | Private multifeatures bot by Th0rgal"
+        },
+        "thumbnail": {
+          "url": "https://warcore.tech/hackedserver/logo.png"
+        },
+        "author": {
+          "name": "HackedServer's Support Server",
+          "url": "https://discordapp.com",
+          "icon_url": "https://warcore.tech/deer/arrows.png"
+        },
+        "fields": [
+          {
+            "name": "<:anvil:589028735206948874> **HackedServer help**",
+            "value": "● wanna get support? <#564158959469068298>\n● wanna talk about hs or share your config? <#588724373767061504>"
+          },
+          {
+            "name": "<:discord2:589029017638666259> **Discord commands**",
+            "value": "● display this message 🡺 **/help**\n● get <@&588733691463991317> rank 🡺 **/rank developer**"
+          }
+        ]
+      }
+    }
+  },
+  "embed": {
+    "aliases": [],
+    "actions": {
+      "embed": {
+        "description": "```👷 DΞΛR bot is currently in development ```",
+        "url": "https://discordapp.com",
+        "color": 16777215,
+        "footer": {
+          "icon_url": "https://warcore.tech/deer/ultra_small_logo.png",
+          "text": "DΞΛR | Private multifeatures bot by Th0rgal"
+        },
+        "thumbnail": {
+          "url": "https://warcore.tech/hackedserver/logo.png"
+        },
+        "author": {
+          "name": "HackedServer's Support Server",
+          "url": "https://discordapp.com",
+          "icon_url": "https://warcore.tech/deer/arrows.png"
+        },
+        "fields": [
+          {
+            "name": "<:hackedserver:589028735206948874> **HackedServer help**",
+            "value": "● wanna get support? <#564158959469068298>\n● wanna talk about hs or share your config? <#588724373767061504>"
+          },
+          {
+            "name": "<:discord:589029017638666259> **Discord commands**",
+            "value": "● display this message 🡺 **/help**\n● get <@&588733691463991317> rank 🡺 **/rank developer**"
+          },
+          {
+            "name": "🐬 **Miscellaneous**",
+            "value": "● display this message 🡺 **/help**\n● get <@&588733691463991317> rank 🡺 **/rank developer**"
+          }
+        ]
+      }
+    }
+  }
+}

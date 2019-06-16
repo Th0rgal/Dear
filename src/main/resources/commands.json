@@ -37,12 +37,11 @@
       }
     ]
   },
-  "ping": {
+  "rank": {
     "aliases": [],
     "actions": [
       {
-        "type": "message",
-        "content": "pong!"
+        "type": "rank"
       }
     ]
   },
@@ -50,7 +49,16 @@
     "aliases": [],
     "actions": [
       {
-        "type": "customembed"
+        "type": "custom_embed"
+      }
+    ]
+  },
+  "ping": {
+    "aliases": [],
+    "actions": [
+      {
+        "type": "message",
+        "content": "pong!"
       }
     ]
   }

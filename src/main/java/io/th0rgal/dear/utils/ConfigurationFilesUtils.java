@@ -17,7 +17,7 @@ public class ConfigurationFilesUtils {
     public static void loadSettings() throws IOException, ParseException {
         //generating settings from settings.json
         JSONObject settings = parseResource("/settings.json");
-        Dear.settings = new Settings((String) settings.get("token"), (String) settings.get("prefix"));
+        Dear.settings = new Settings((String) settings.get("token"), (String) settings.get("prefix"), (JSONObject)settings.get("embed_template"));
     }
 
     public static void loadCommands() throws IOException, ParseException {

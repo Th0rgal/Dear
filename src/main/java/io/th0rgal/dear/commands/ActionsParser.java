@@ -1,9 +1,6 @@
 package io.th0rgal.dear.commands;
 
-import io.th0rgal.dear.actions.CommandAction;
-import io.th0rgal.dear.actions.CustomEmbedAction;
-import io.th0rgal.dear.actions.EmbedAction;
-import io.th0rgal.dear.actions.MessageAction;
+import io.th0rgal.dear.actions.*;
 
 import io.th0rgal.dear.utils.embeds.EmbedParser;
 
@@ -31,13 +28,18 @@ public class ActionsParser {
                     commandActions[iterator] = messageAction;
                     break;
 
+                case "rank":
+                    RankAction rankAction = new RankAction();
+                    commandActions[iterator] = rankAction;
+                    break;
+
                 case "embed":
                     EmbedAction embedAction = new EmbedAction();
                     embedAction.setMessage(new EmbedParser((JSONObject)actionJson.get("content")).toMessageEmbed());
                     commandActions[iterator] = embedAction;
                     break;
 
-                case "customembed":
+                case "custom_embed":
                     CustomEmbedAction customEmbedAction = new CustomEmbedAction();
                     commandActions[iterator] = customEmbedAction;
                     break;

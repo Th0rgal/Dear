@@ -6,21 +6,22 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.util.regex.Pattern;
-
-
 public class CustomEmbedAction implements CommandAction {
 
     @Override
     public void performActions(GuildMessageReceivedEvent event, String command, String[] args) {
-
-        String embed = command.substring(args[0].length());
-        final Pattern pattern = Pattern.compile("'''(?:[a-z]+\\n)?(.*)'''", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
-
+        //remove the label of the command and the first space
+        String input = command.substring(args[0].length() + 1);
         try {
-            event.getChannel().sendMessage(new EmbedParser((JSONObject) new JSONParser().parse(embed)).toMessageEmbed()).queue();
-        } catch (ParseException e) {
-            event.getChannel().sendMessage("Input could not be parsed:" + pattern.matcher(embed).group()).queue();
+            String code = input.split("```")[1].replace("json", "");
+
+            try {
+                event.getChannel().sendMessage(new EmbedParser((JSONObject) new JSONParser().parse(code)).toMessageEmbed()).queue();
+            } catch (ParseException e) {
+                event.getChannel().sendMessage("Input could not be parsed:```" + code + "```").queue();
+            }
+        } catch (Exception exception) {
+            event.getChannel().sendMessage("Wrong input:```" + input + "```").queue();
         }
     }
 

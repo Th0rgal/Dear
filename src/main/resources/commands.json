@@ -8,7 +8,7 @@
       {
         "type": "embed",
         "content": {
-          "description": "** **",
+          "description": "**\n**",
           "url": "https://hackedserver.info/",
           "color": 1553640,
           "footer": {
@@ -26,11 +26,11 @@
           "fields": [
             {
               "name": "<:anvil:589028735206948874> **HackedServer help**",
-              "value": "● Website » [hackedserver.info](https://hackedserver.info)\n● Documentation » [docs.hackedserver.info](https://docs.hackedserver.info)\n● wanna get support? <#564158959469068298>\n● wanna talk about hs or share your config? <#588724373767061504>"
+              "value": "**»** Website • [hackedserver.info](https://hackedserver.info)\n**»** Documentation • [docs.hackedserver.info](https://docs.hackedserver.info)\n**»** wanna get support? <#564158959469068298>\n**»** wanna talk about hs or share your config? <#588724373767061504>\n\u200B"
             },
             {
               "name": "<:discord2:589029017638666259> **Discord commands**",
-              "value": "● display this message 🡺 **/help**\n● get <@&588733691463991317> rank 🡺 **/rank developer**"
+              "value": "**»** display this message • **!help**\n**»** get <@&588733691463991317> rank • **!rank developer**\n\u200B"
             }
           ]
         }

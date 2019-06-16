@@ -14,7 +14,7 @@ public class CommandWrapper {
     public CommandWrapper(String command, JSONObject jsonObject) {
         this.command = command;
         this.aliases = JSONUtils.toStringArray((JSONArray) jsonObject.get("aliases"));
-        this.actions = new ActionsParser((JSONObject) jsonObject.get("actions")).getActions();
+        this.actions = new ActionsParser((JSONArray) jsonObject.get("actions")).getActions();
     }
 
     public CommandWrapper(String command, String[] aliases, CommandAction... actions) {

@@ -6,30 +6,34 @@ import io.th0rgal.dear.actions.MessageAction;
 
 import io.th0rgal.dear.utils.embeds.EmbedParser;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 public class ActionsParser {
 
     private CommandAction[] commandActions;
 
-    public ActionsParser(JSONObject actions) {
-        commandActions = new CommandAction[actions.keySet().size()];
+    public ActionsParser(JSONArray actions) {
+        commandActions = new CommandAction[actions.size()];
         int iterator = 0;
-        for (Object actionSection : actions.keySet()) {
-            String actionName = (String) actionSection;
-            Object action = actions.get(actionSection);
+        for (Object actionSection : actions) {
+            JSONObject actionJson = (JSONObject)actionSection;
+            String type = (String)actionJson.get("type");
+            JSONParser jsonParser = new JSONParser();
 
-            switch (actionName) {
+            switch (type) {
 
                 case "message":
                     MessageAction messageAction = new MessageAction();
-                    messageAction.setMessage((String)action);
+                    messageAction.setMessage((String)new InputsParser(actionJson).parse());
                     commandActions[iterator] = messageAction;
                     break;
 
                 case "embed":
                     EmbedAction embedAction = new EmbedAction();
-                    embedAction.setMessage(new EmbedParser((JSONObject)action).toMessageEmbed());
+                    System.out.println(new InputsParser(actionJson).parse());
+                    embedAction.setMessage(new EmbedParser((JSONObject)new InputsParser(actionJson).parse()).toMessageEmbed());
                     commandActions[iterator] = embedAction;
                     break;
 

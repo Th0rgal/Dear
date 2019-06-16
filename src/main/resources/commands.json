@@ -7,27 +7,26 @@
     "actions": [
       {
         "type": "embed",
-        "input_type": "code",
-        "code": {
-          "description": "```👷 DΞΛR bot is currently in development ```",
-          "url": "https://discordapp.com",
-          "color": 16777215,
+        "content": {
+          "description": "** **",
+          "url": "https://hackedserver.info/",
+          "color": 1553640,
           "footer": {
-            "icon_url": "https://warcore.tech/deer/ultra_small_logo.png",
+            "icon_url": "https://hackedserver.info/dear/dear_small.png",
             "text": "DΞΛR | Private multifeatures bot by Th0rgal"
           },
           "thumbnail": {
-            "url": "https://warcore.tech/hackedserver/logo.png"
+            "url": "https://hackedserver.info/dear/hackedserver_transparent.png"
           },
           "author": {
             "name": "HackedServer's Support Server",
             "url": "https://discordapp.com",
-            "icon_url": "https://warcore.tech/deer/arrows.png"
+            "icon_url": "https://hackedserver.info/dear/arrows.png"
           },
           "fields": [
             {
               "name": "<:anvil:589028735206948874> **HackedServer help**",
-              "value": "● wanna get support? <#564158959469068298>\n● wanna talk about hs or share your config? <#588724373767061504>"
+              "value": "● Website » [hackedserver.info](https://hackedserver.info)\n● Documentation » [docs.hackedserver.info](https://docs.hackedserver.info)\n● wanna get support? <#564158959469068298>\n● wanna talk about hs or share your config? <#588724373767061504>"
             },
             {
               "name": "<:discord2:589029017638666259> **Discord commands**",
@@ -38,13 +37,21 @@
       }
     ]
   },
+  "ping": {
+    "aliases": [],
+    "actions": [
+      {
+        "type": "message",
+        "content": "pong!"
+      }
+    ]
+  },
   "embed": {
     "aliases": [],
     "actions": [
       {
         "type": "message",
-        "input_type": "code",
-        "code": "test"
+        "content": "test"
       }
     ]
   }

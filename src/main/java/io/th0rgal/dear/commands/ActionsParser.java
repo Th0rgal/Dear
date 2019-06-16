@@ -26,14 +26,13 @@ public class ActionsParser {
 
                 case "message":
                     MessageAction messageAction = new MessageAction();
-                    messageAction.setMessage((String)new InputsParser(actionJson).parse());
+                    messageAction.setMessage((String)actionJson.get("content"));
                     commandActions[iterator] = messageAction;
                     break;
 
                 case "embed":
                     EmbedAction embedAction = new EmbedAction();
-                    System.out.println(new InputsParser(actionJson).parse());
-                    embedAction.setMessage(new EmbedParser((JSONObject)new InputsParser(actionJson).parse()).toMessageEmbed());
+                    embedAction.setMessage(new EmbedParser((JSONObject)actionJson.get("content")).toMessageEmbed());
                     commandActions[iterator] = embedAction;
                     break;
 

@@ -1,6 +1,7 @@
 package io.th0rgal.dear.commands;
 
 import io.th0rgal.dear.actions.CommandAction;
+import io.th0rgal.dear.actions.CustomEmbedAction;
 import io.th0rgal.dear.actions.EmbedAction;
 import io.th0rgal.dear.actions.MessageAction;
 
@@ -34,6 +35,11 @@ public class ActionsParser {
                     EmbedAction embedAction = new EmbedAction();
                     embedAction.setMessage(new EmbedParser((JSONObject)actionJson.get("content")).toMessageEmbed());
                     commandActions[iterator] = embedAction;
+                    break;
+
+                case "customembed":
+                    CustomEmbedAction customEmbedAction = new CustomEmbedAction();
+                    commandActions[iterator] = customEmbedAction;
                     break;
 
                 default:

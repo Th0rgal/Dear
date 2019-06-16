@@ -5,7 +5,7 @@ import io.th0rgal.dear.actions.EmbedAction;
 import io.th0rgal.dear.actions.MessageAction;
 
 import io.th0rgal.dear.utils.embeds.EmbedParser;
-import net.dv8tion.jda.api.entities.MessageEmbed;
+
 import org.json.simple.JSONObject;
 
 public class ActionsParser {

@@ -13,12 +13,11 @@ public class CustomEmbedAction implements CommandAction {
         //remove the label of the command and the first space
         String input = command.substring(args[0].length() + 1);
         try {
-            String code = input.split("```")[1].replace("json", "");
 
             try {
-                event.getChannel().sendMessage(new EmbedParser((JSONObject) new JSONParser().parse(code)).toMessageEmbed()).queue();
+                event.getChannel().sendMessage(new EmbedParser((JSONObject) new JSONParser().parse(input)).toMessageEmbed()).queue();
             } catch (ParseException e) {
-                event.getChannel().sendMessage("Input could not be parsed:```" + code + "```").queue();
+                event.getChannel().sendMessage("Input could not be parsed:```" + input + "```").queue();
             }
         } catch (Exception exception) {
             event.getChannel().sendMessage("Wrong input:```" + input + "```").queue();
